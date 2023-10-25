@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES5", // Ou qualquer versão do ECMAScript que você desejar (es3, es6, es2015, etc.)
+    "composite": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "allowSyntheticDefaultImports": true,
+  },
+  "include": ["**/*.ts"]
+}
