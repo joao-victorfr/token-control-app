@@ -1,5 +1,7 @@
 import React, { useContext, ChangeEvent } from 'react';
 import LoginContext from '../context/LoginContext';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/Login.css'
 // import useLoginContext from '../context/useLoginContext';
 // import '../App.css';
 
@@ -17,21 +19,38 @@ const Login: React.FC = () => {
 
 
   return (
-    <div className="content">
-      <div className="container-login">
+    <div className="box-login">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet" />
+      </head>
+      <div className='title'>
+        <h1>Controle de Fichas</h1>
+      </div>
+      <div className='login-form'>
         <form className="form-login">
-          <h1>Controle de Fichas</h1>
+          <label 
+          className='label'
+          >
+            Digite seu login
+          </label>
           <input
-            className="input-login"
+            className="input-login form-control"
+            aria-describedby="inputGroup-sizing-sm"
             type="user"
             name="user"
-            id="user"
+            id="inputGroup-sizing-default"
             placeholder="Digite seu usuário"
             value={user}
             onChange={ handleUserChange }
           />
+          <label className='label'>Digite sua senha</label>
           <input
-            className="input-login"
+            className="input-login form-control"
             type="password"
             name="pass"
             id="pass"

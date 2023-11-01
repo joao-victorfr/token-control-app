@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import LoginContext from '../context/LoginContext';
 import Header from "./Header";
 
-const Home: React.FC = () => {
+const User: React.FC = () => {
   const login = useContext(LoginContext);
   const { user } = login;
   return (
@@ -16,4 +16,4 @@ const Home: React.FC = () => {
   )
 }
 
-export default Home;
+export default User;

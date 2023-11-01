@@ -1,13 +1,17 @@
-import React from "react";
-//import HomeContext from '../context/HomeContext';
+import React, { useContext } from "react";
+import HeaderContext from '../context/HeaderContext';
 // import LoginContext from '../context/LoginContext';
 
 const Header: React.FC = () => {
+  const header = useContext(HeaderContext);
+  const { handleClickHome } = header;
   return (
     <div>
       <header>
         <ul>
-          <li>Início</li>
+          <li
+          onClick={handleClickHome}
+          >Início</li>
           <li>Cadastro de usuários</li>
           <li>Cadastro Pessoal</li>
           <li>Protocolo</li>

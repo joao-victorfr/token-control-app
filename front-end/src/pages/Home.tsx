@@ -12,6 +12,10 @@ const Home: React.FC = () => {
         { `Bem Vindo ${user}`}
       </h1>
       <Header />
+      <article>
+        <h2>Avisos</h2>
+        <p>Nada aqui ainda</p>
+      </article>
     </div>
   )
 }
