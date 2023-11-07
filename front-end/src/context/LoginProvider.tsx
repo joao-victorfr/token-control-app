@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useCallback, Dispatch, SetStateAction } from 'react';
 import LoginContext from './LoginContext';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 interface LoginProviderProps {
   children: React.ReactNode;
@@ -11,7 +12,23 @@ const LoginProvider: React.FC<LoginProviderProps> = ({ children }: LoginProvider
   const [pass, setPass] = useState<string>('');
   const history = useNavigate();
 
+  const handleLogin = async () => {
+    try {
+      const response = await axios.post('http://localhost:3001/login/', {
+        user,
+        pass,
+      });
+
+      console.log(response)
+
+    } catch (error) {
+      console.error('Erro ao verificar a conta: ' + console.error(error))
+    }
+  }
+
+
   const handleClick = useCallback(() => {
+    handleLogin
     history('/home');
   }, [history])
 
